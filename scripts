@@ -39,3 +39,9 @@ docker run -it \
 
 docker run -it -d python:3.9 bin/bash
 docker exec -it CONTAINER_ID /bin/bash
+
+
+conda install -c conda-forge pgcli
+pip install -U mycli
+
+pgcli -h localhost -p 5432 -u root -d ny_taxi
