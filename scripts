@@ -43,5 +43,10 @@ docker exec -it CONTAINER_ID /bin/bash
 
 conda install -c conda-forge pgcli
 pip install -U mycli
-
 pgcli -h localhost -p 5432 -u root -d ny_taxi
+
+docker run -it \
+  -e PGADMIN_DEFAULT_EMAIL="admin@admin.com" \
+  -e PGADMIN_DEFAULT_PASSWORD="root" \
+  -p 8080:80 \
+  dpage/pgadmin4
